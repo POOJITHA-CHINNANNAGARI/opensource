@@ -1,0 +1,8 @@
+# Read the input value
+N = int(input())
+
+# Calculate the number of notebooks
+notebooks = N * 10
+
+# Output the result
+print(notebooks)
