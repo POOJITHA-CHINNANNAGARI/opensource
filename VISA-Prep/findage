@@ -1,0 +1,8 @@
+def vignesh_age_when_charan_is_X(X):
+    return X - 15
+
+# Reading the input
+X = int(input())
+
+# Output the result
+print(vignesh_age_when_charan_is_X(X))
