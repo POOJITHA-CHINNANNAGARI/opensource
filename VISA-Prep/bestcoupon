@@ -1,0 +1,14 @@
+# Read the bill amount
+X = int(input())
+
+# Calculate the amount after applying the 10% discount
+amount_after_10_percent_discount = 0.9 * X
+
+# Calculate the amount after applying the Rs. 100 flat discount
+amount_after_flat_100_discount = X - 100
+
+# The final amount is the minimum of both options (ensure no negative values)
+final_amount = min(amount_after_10_percent_discount, amount_after_flat_100_discount)
+
+# Output the result
+print(int(final_amount))
