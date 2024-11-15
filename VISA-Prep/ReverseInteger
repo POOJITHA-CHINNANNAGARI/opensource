@@ -1,0 +1,26 @@
+def reverse_integer(n):
+    # Define the 32-bit signed integer range
+    INT_MIN = -2147483648
+    INT_MAX = 2147483647
+    
+    # Handle negative numbers
+    sign = -1 if n < 0 else 1
+    n = abs(n)
+    
+    # Reverse the digits
+    reversed_n = int(str(n)[::-1])
+    
+    # Apply the original sign
+    reversed_n *= sign
+    
+    # Check if the reversed number is within the 32-bit signed integer range
+    if reversed_n < INT_MIN or reversed_n > INT_MAX:
+        return 0
+    else:
+        return reversed_n
+
+# Input reading
+n = int(input())
+
+# Output the result
+print(reverse_integer(n))
