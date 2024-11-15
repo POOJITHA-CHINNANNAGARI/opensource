@@ -1,0 +1,15 @@
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    # Read X and N for the current test case
+    X, N = map(int, input().split())
+    
+    # Calculate points per test case
+    points_per_case = X // 10
+    
+    # Calculate the score Ajay gets
+    score = points_per_case * N
+    
+    # Output the result
+    print(score)
