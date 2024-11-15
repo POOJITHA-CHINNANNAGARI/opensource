@@ -1,0 +1,10 @@
+# Read the input values
+X, Y, Z = map(int, input().split())
+
+# Check if Vignesh can afford the gym and trainer, only the gym, or neither
+if Z < X:
+    print(0)  # Cannot afford the gym
+elif Z >= X + Y:
+    print(2)  # Can afford both the gym and the trainer
+else:
+    print(1)  # Can only afford the gym
