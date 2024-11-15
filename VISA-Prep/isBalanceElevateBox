@@ -1,0 +1,25 @@
+def calculate_balance(N, A):
+    total_sum = sum(A)  # Calculate the total sum of the array
+    left_sum = 0         # Initialize left sum to 0
+    balance_array = []
+    
+    for i in range(N):
+        # Calculate the right sum as total_sum - left_sum - A[i]
+        right_sum = total_sum - left_sum - A[i]
+        
+        # Calculate the balance as the absolute difference
+        balance = abs(left_sum - right_sum)
+        balance_array.append(balance)
+        
+        # Update left_sum by adding the current element
+        left_sum += A[i]
+    
+    return balance_array
+
+# Read input
+N = int(input())           # The size of the array
+A = list(map(int, input().split()))  # The elements of the array
+
+# Calculate and print the balance array
+result = calculate_balance(N, A)
+print(*result)
