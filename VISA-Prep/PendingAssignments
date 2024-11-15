@@ -1,0 +1,18 @@
+def can_complete_assignments(X, Y, Z):
+    # Total time required to complete all assignments
+    total_time_needed = X * Y
+    
+    # Total time available in Z days (Z days * 24 hours * 60 minutes)
+    total_time_available = Z * 24 * 60
+    
+    # Check if Vignesh can complete the assignments in the given days
+    if total_time_needed <= total_time_available:
+        return "YES"
+    else:
+        return "NO"
+
+# Reading the input
+X, Y, Z = map(int, input().split())
+
+# Output the result
+print(can_complete_assignments(X, Y, Z))
