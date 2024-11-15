@@ -1,0 +1,17 @@
+def determine_winner(vignesh, charan):
+    # Check possible outcomes
+    if vignesh == charan:
+        return "NULL"
+    
+    # Vignesh wins conditions
+    if (vignesh == "R" and charan == "S") or (vignesh == "P" and charan == "R") or (vignesh == "S" and charan == "P"):
+        return "Vignesh"
+    
+    # If none of the above, Charan wins
+    return "Charan"
+
+# Reading the input
+vignesh_throw, charan_throw = input().split()
+
+# Output the result
+print(determine_winner(vignesh_throw, charan_throw))
