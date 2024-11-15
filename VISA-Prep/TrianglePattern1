@@ -1,0 +1,13 @@
+def print_triangle(N):
+    current_number = 1
+    for i in range(1, N + 1):
+        # Print the numbers for the current row
+        row_numbers = [str(current_number + j) for j in range(i)]
+        print(" ".join(row_numbers))
+        current_number += i  # Update current_number for the next row
+
+# Read the input
+N = int(input())
+
+# Output the triangle
+print_triangle(N)
