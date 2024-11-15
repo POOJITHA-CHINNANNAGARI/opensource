@@ -1,0 +1,12 @@
+def can_contribute(A, B, C, X):
+    # Check if any two of them can contribute to the subscription cost
+    if A + B >= X or A + C >= X or B + C >= X:
+        return "YES"
+    else:
+        return "NO"
+
+# Reading the input
+A, B, C, X = map(int, input().split())
+
+# Output the result
+print(can_contribute(A, B, C, X))
