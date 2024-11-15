@@ -1,0 +1,12 @@
+def solve():
+    T = int(input())  # Read number of test cases
+    for _ in range(T):
+        N, M = map(int, input().split())  # Read N and M for each test case
+        # Calculate the number of students who won't get tickets
+        if N <= M:
+            print(0)
+        else:
+            print(N - M)
+
+# Call the solve function to execute the solution
+solve()
