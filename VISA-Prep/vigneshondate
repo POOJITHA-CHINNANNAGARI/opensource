@@ -1,0 +1,8 @@
+# Read the input values
+X, Y = map(int, input().split())
+
+# Compare the money Vignesh has with the bill
+if X >= Y:
+    print("YES")
+else:
+    print("NO")
