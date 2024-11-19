@@ -1,0 +1,9 @@
+# Read input
+N = int(input())  # First line input for N
+k = int(input())  # Second line input for k
+
+# Check if the k-th bit is set
+if (N >> (k - 1)) & 1:
+    print("true")
+else:
+    print("false")
