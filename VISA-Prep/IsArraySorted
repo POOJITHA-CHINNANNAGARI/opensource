@@ -1,0 +1,11 @@
+# Read input
+n = int(input())  # Number of elements in the array
+arr = list(map(int, input().split()))  # The array of integers
+
+# Check if the array is sorted in non-decreasing order
+for i in range(n - 1):
+    if arr[i] > arr[i + 1]:
+        print("false")
+        break
+else:
+    print("true")
