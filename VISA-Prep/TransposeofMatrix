@@ -1,0 +1,23 @@
+def transpose_matrix(N, matrix):
+    # Create a new matrix for the transpose
+    transpose = [[0] * N for _ in range(N)]
+    
+    # Populate the transpose matrix
+    for i in range(N):
+        for j in range(N):
+            transpose[j][i] = matrix[i][j]
+    
+    # Print the transpose matrix
+    for row in transpose:
+        print(" ".join(map(str, row)))
+
+# Input reading
+N = int(input())  # Read the size of the matrix
+matrix = []
+
+# Read the matrix
+for _ in range(N):
+    matrix.append(list(map(int, input().split())))
+
+# Get the transpose and print it
+transpose_matrix(N, matrix)
