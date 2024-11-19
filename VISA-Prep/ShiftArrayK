@@ -1,0 +1,17 @@
+def rotate_array(N, arr, K):
+    # Normalize K to avoid excessive rotations
+    K = K % N
+    
+    # Rotate the array using slicing
+    rotated_arr = arr[-K:] + arr[:-K]
+    
+    # Print the rotated array
+    print(" ".join(map(str, rotated_arr)))
+
+# Input Parsing
+N = int(input())  # Size of the array
+arr = list(map(int, input().split()))  # The array itself
+K = int(input())  # Number of rotations
+
+# Call the function to rotate and print the result
+rotate_array(N, arr, K)
