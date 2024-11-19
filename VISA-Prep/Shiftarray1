@@ -1,0 +1,14 @@
+def rotate_array(N, arr):
+    # Rotate the array by one place
+    rotated_arr = arr[1:] + [arr[0]]
+    return rotated_arr
+
+# Read input
+N = int(input())  # size of the array
+arr = list(map(int, input().split()))  # the array of integers
+
+# Get the rotated array
+rotated_array = rotate_array(N, arr)
+
+# Print the result
+print(" ".join(map(str, rotated_array)))
