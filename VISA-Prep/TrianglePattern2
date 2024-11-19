@@ -1,0 +1,7 @@
+# Read the height of the triangle
+N = int(input())
+
+# Loop through the rows from 1 to N
+for i in range(1, N + 1):
+    # Print the number i, repeated i times, separated by space
+    print(" ".join([str(i)] * i))
