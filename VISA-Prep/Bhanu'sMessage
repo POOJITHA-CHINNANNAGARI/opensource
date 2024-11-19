@@ -1,0 +1,27 @@
+import re
+
+def is_valid_phone_number(number: str) -> str:
+    # Case 1: Check if the number is exactly 10 digits (no country code)
+    if len(number) == 10 and number.isdigit():
+        if sum(int(digit) for digit in number) > 0:
+            return "Correct"
+    
+    # Case 2: Check if the number has a valid country code +xx followed by 10 digits
+    match = re.match(r'^\+(\d{2}) (\d{10})$', number)
+    
+    if match:
+        country_code = match.group(1)
+        digits = match.group(2)
+        
+        # Ensure the country code has exactly 2 digits and digits part is valid
+        if len(country_code) == 2 and digits.isdigit() and sum(int(digit) for digit in digits) > 0:
+            return "Correct"
+    
+    # If neither of the valid conditions match
+    return "Incorrect"
+
+# Read the input
+number = input()
+
+# Output the result
+print(is_valid_phone_number(number))
