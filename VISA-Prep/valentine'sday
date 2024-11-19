@@ -1,0 +1,8 @@
+# Input: Total money X and cost of one chocolate Y
+X, Y = map(int, input().strip().split())
+
+# Calculate the maximum number of chocolates
+chocolates = X // Y
+
+# Output the result
+print(chocolates)
