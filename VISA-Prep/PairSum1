@@ -1,0 +1,27 @@
+# Input: Number of elements in the array
+n = int(input())
+
+# Input: Elements of the array
+arr = list(map(int, input().split()))
+
+# Input: Target sum k
+k = int(input())
+
+# Using a set to track elements we have seen so far
+seen = set()
+found = False
+
+# Loop through each element in the array
+for num in arr:
+    # Check if the complement exists in the seen set
+    if k - num in seen:
+        found = True
+        break
+    # Add the current number to the seen set
+    seen.add(num)
+
+# Output result
+if found:
+    print("true")
+else:
+    print("false")
