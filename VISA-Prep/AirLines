@@ -1,0 +1,13 @@
+import math
+
+# Input: Number of planes owned and passengers
+X, N = map(int, input().strip().split())
+
+# Calculate total planes required
+planes_required = math.ceil(N / 100)
+
+# Calculate additional planes needed
+planes_to_buy = max(0, planes_required - X)
+
+# Output the result
+print(planes_to_buy)
