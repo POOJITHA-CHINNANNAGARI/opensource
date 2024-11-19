@@ -1,0 +1,34 @@
+def reduce_string(s):
+    # Initialize the result as an empty string
+    result = ""
+    
+    # Length of the string
+    n = len(s)
+    
+    # Edge case: If string is empty, return an empty string
+    if n == 0:
+        return result
+    
+    # Initialize the count for the first character
+    count = 1
+    
+    # Iterate through the string
+    for i in range(1, n):
+        # If current character is the same as the previous one
+        if s[i] == s[i - 1]:
+            count += 1
+        else:
+            # Append the previous character and its count to result
+            result += s[i - 1] + str(count)
+            count = 1  # Reset count for the new character
+    
+    # Don't forget to add the last character and its count
+    result += s[-1] + str(count)
+    
+    return result
+
+# Input: String s
+s = input().strip()
+
+# Output: Reduced string
+print(reduce_string(s))
