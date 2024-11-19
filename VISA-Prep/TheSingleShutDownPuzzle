@@ -1,0 +1,25 @@
+# Input: Dimensions of the grid
+n, m = map(int, input().split())
+
+# Input: The grid
+grid = [list(map(int, input().split())) for _ in range(n)]
+
+# Step 1: Identify rows and columns to be zeroed
+rows_to_zero = set()
+cols_to_zero = set()
+
+for i in range(n):
+    for j in range(m):
+        if grid[i][j] == 0:
+            rows_to_zero.add(i)
+            cols_to_zero.add(j)
+
+# Step 2: Update the grid
+for i in range(n):
+    for j in range(m):
+        if i in rows_to_zero or j in cols_to_zero:
+            grid[i][j] = 0
+
+# Output: The updated grid
+for row in grid:
+    print(*row)
