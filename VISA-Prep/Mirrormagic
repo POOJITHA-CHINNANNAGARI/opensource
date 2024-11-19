@@ -1,0 +1,18 @@
+def mirror_matrix(N, matrix):
+    mirrored_matrix = []
+    
+    for row in matrix:
+        mirrored_matrix.append(row[::-1])  # Reverse each row
+    
+    return mirrored_matrix
+
+# Read input
+N = int(input())  # Size of the matrix
+matrix = [list(map(int, input().split())) for _ in range(N)]  # Read the matrix
+
+# Get the mirrored matrix
+result = mirror_matrix(N, matrix)
+
+# Print the mirrored matrix
+for row in result:
+    print(*row)
