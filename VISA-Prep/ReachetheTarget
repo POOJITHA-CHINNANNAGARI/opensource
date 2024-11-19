@@ -1,0 +1,8 @@
+# Read the number of test cases
+T = int(input())
+
+# Process each test case
+for _ in range(T):
+    X, Y = map(int, input().split())  # Read target and current score
+    # Calculate and print the runs needed to win
+    print(X - Y + 1)
