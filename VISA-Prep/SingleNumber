@@ -1,0 +1,13 @@
+# Read the input
+N = int(input())  # Size of the array (odd number)
+arr = list(map(int, input().split()))  # Array of N integers
+
+# Initialize result to 0
+result = 0
+
+# XOR all elements of the array
+for num in arr:
+    result ^= num
+
+# Print the result (the number that appears only once)
+print(result)
