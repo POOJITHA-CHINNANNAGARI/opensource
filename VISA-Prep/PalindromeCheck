@@ -1,0 +1,8 @@
+# Read the input string
+S = input().strip()
+
+# Check if the string is equal to its reverse
+if S == S[::-1]:
+    print("TRUE")
+else:
+    print("FALSE")
