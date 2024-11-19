@@ -1,0 +1,18 @@
+def get_unique_elements(n, arr):
+    seen = set()
+    result = []
+    for num in arr:
+        if num not in seen:
+            result.append(num)
+            seen.add(num)
+    return result
+
+# Read input
+n = int(input())  # size of the array
+arr = list(map(int, input().split()))  # the array of integers
+
+# Get the unique elements
+unique_elements = get_unique_elements(n, arr)
+
+# Print the result
+print(" ".join(map(str, unique_elements)))
