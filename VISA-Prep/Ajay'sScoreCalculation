@@ -1,0 +1,16 @@
+# Read the number of test cases
+T = int(input())
+
+# Iterate through each test case
+for _ in range(T):
+    # Read the total points (X) and the number of test cases passed (N)
+    X, N = map(int, input().split())
+    
+    # Each test case is worth X / 10 points
+    score_per_test_case = X // 10
+    
+    # Calculate Ajay's score
+    score = score_per_test_case * N
+    
+    # Output the score
+    print(score)
