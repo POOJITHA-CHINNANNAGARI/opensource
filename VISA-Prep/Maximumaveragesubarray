@@ -1,0 +1,20 @@
+# Input: Size of the array (n) and size of the subarray (k)
+n, k = map(int, input().split())
+
+# Input: The array elements
+nums = list(map(int, input().split()))
+
+# Initialize the maximum sum as the sum of the first k elements
+current_sum = sum(nums[:k])
+max_sum = current_sum
+
+# Slide the window through the array
+for i in range(k, n):
+    current_sum += nums[i] - nums[i - k]  # Update the sum for the new window
+    max_sum = max(max_sum, current_sum)  # Update the maximum sum if needed
+
+# Calculate the maximum average
+max_average = max_sum / k
+
+# Output the result with 4 decimal places
+print(f"{max_average:.4f}")
