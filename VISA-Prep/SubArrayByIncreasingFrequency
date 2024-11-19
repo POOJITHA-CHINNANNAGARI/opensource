@@ -1,0 +1,16 @@
+from collections import Counter
+
+# Input: Size of the array
+n = int(input())
+
+# Input: The array elements
+nums = list(map(int, input().split()))
+
+# Count the frequency of each element
+freq = Counter(nums)
+
+# Sort the array based on frequency first, then by value (in decreasing order for ties)
+sorted_nums = sorted(nums, key=lambda x: (freq[x], -x))
+
+# Output the sorted array
+print(*sorted_nums)
