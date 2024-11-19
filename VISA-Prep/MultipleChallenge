@@ -1,0 +1,18 @@
+def count_divisible_by_3_or_5(N):
+    # Count numbers divisible by 3, 5, or both
+    divisible_by_3 = N // 3
+    divisible_by_5 = N // 5
+    divisible_by_15 = N // 15
+    
+    # Using Inclusion-Exclusion principle
+    result = divisible_by_3 + divisible_by_5 - divisible_by_15
+    return result
+
+# Read input
+N = int(input())  # upper limit of the range
+
+# Get the count of numbers divisible by 3, 5, or both
+result = count_divisible_by_3_or_5(N)
+
+# Print the result
+print(result)
