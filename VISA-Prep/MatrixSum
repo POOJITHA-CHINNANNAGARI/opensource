@@ -1,0 +1,17 @@
+# Read the size of the matrix (N)
+N = int(input())
+
+# Read the matrix itself
+matrix = [list(map(int, input().split())) for _ in range(N)]
+
+# Calculate row sums
+row_sums = [sum(row) for row in matrix]
+
+# Calculate column sums
+column_sums = [sum(matrix[i][j] for i in range(N)) for j in range(N)]
+
+# Compute the resultant array A
+result = [row_sums[i] + column_sums[i] for i in range(N)]
+
+# Output the resultant array
+print(" ".join(map(str, result)))
